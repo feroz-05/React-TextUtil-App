@@ -6,20 +6,21 @@ export default function TextBox(props) {
 
     function onChange(event){
         setText(event.target.value);
-    }
+    };
     
     function clicked(){
         const data = text.toUpperCase();
         setText(data);
         if(!text){
-            alert("Please Fill Your text")
+            props.showAlert("Please Enter Text!!!", "danger");
         }
 }
     function clickedLower(){
         const data = text.toLowerCase()
         setText(data);
         if(!text){
-            alert("Please Fill Your text")
+            props.showAlert("Please Enter Text!!!", "danger");
+
         }
     }
 
@@ -27,7 +28,8 @@ export default function TextBox(props) {
     function updated(){
         update = setText(text);
         if(!text){
-            alert("Please Fill Your text")
+            props.showAlert("Please Enter Text!!!", "danger");
+
         }
     }
     function clickedReverse(){
@@ -35,16 +37,15 @@ export default function TextBox(props) {
         var  reverse = arr.reverse().join(' ');
         setText(reverse);
         if(!text){
-            alert("Please Fill Your text")
+            props.showAlert("Please Enter Text!!!", "danger");
+
         }
     }
 
     function clickedClear(){
         let data = '';
         setText(data);
-        if(!text){
-            alert("Please Fill Your text")
-        }
+        props.showAlert("Successfully Cleared!!!", "success");
     }
     
         let style ={
