@@ -78,6 +78,7 @@ export default function TextBox(props) {
     <div className={`mt-3`}>
         <h4>Your Text Snippet</h4>
         <p>Total words <b>{text.split(" ").length -1}</b> and & Characters <b>{text.length}</b></p>
+        <h6>{(text.split(" ").length / 250).toFixed(2)} Minutes to read</h6>
         <h3>Summary</h3>
         <p>  {text}</p>
     </div>
