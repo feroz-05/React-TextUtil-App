@@ -1,34 +1,15 @@
 import React, {useState} from 'react'
 
 export default function About() {
+
     const[style, setstyle] = useState({
-        color:"black",  
-        backgroundColor: "purple"
+        color:"white",  
+        backgroundColor: "#123f40"
     });
-    const [btn, setbtn] = useState("Enable light Mode");
-
-    
-    function EnableDark() {  
-        if(style.color === "black"){ 
-            setstyle({
-                color: "white", 
-                backgroundColor: "purple"
-            })
-            setbtn("Enable light Mode")
-        } else {
-            setstyle({
-                color: "black", 
-                backgroundColor: "white"
-            })
-            
-            setbtn("Enable Dark Mode");
-        }
-}
-
 return (
     <div>
-    <div className="accordion" id="accordionExample" >
-  <div className="accordion-item" style={style}>
+    <div className="accordion mx-5 " style={style} id="accordionExample" >
+  <div className="accordion-item " >
     <h2 className="accordion-header">
       <button className="accordion-button" style={style} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         Accordion Item #1
@@ -65,7 +46,6 @@ return (
     </div>
   </div>
 </div>
-    <button type="button" class="btn btn-primary my-4 mx-3" onClick={EnableDark}>{btn}</button>
     </div>
   )
 }

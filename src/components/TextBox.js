@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useState } from 'react'
 export default function TextBox(props) {
-    const [text,setText] = useState("Enter your text");
+    const [text,setText] = useState("");
 
     function onChange(event){
         setText(event.target.value);
@@ -70,14 +70,15 @@ export default function TextBox(props) {
         <label htmlFor="exampleFormControlTextarea1"  className={`form-label`} ><b>Enter Your Text Here</b></label>
         <textarea className="form-control" value={text} onChange={onChange} style= {style} id="exampleFormControlTextarea1" rows="8"></textarea>
     </div>
-        <button type="button" onClick={clicked} className="btn btn-dark mx-2 ">To-Upper</button>
-        <button type="button" onClick={clickedLower} className="btn btn-dark mx-2">To-Lower</button>
-        <button type="button" onClick={clickedReverse} className="btn btn-dark mx-2"> Reverse </button>
-        <button type="button" onClick={clickedClear} className="btn btn-dark mx-2"> Clear </button>
+        <button type="button" onClick={clicked} className="btn btn-primary mx-2 ">To-Upper</button>
+        <button type="button" onClick={clickedLower} className="btn btn-primary mx-2">To-Lower</button>
+        <button type="button" onClick={clickedReverse} className="btn btn-primary mx-2"> Reverse </button>
+        <button type="button" onClick={clickedClear} className="btn btn-primary mx-2"> Clear </button>
     
     <div className={`mt-3`}>
+        <h4>Your Text Snippet</h4>
         <p>Total words <b>{text.split(" ").length -1}</b> and & Characters <b>{text.length}</b></p>
-        <h3>Your Text Snippet</h3>
+        <h3>Summary</h3>
         <p>  {text}</p>
     </div>
 

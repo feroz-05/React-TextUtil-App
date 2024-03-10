@@ -5,6 +5,8 @@ import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextBox from './components/TextBox';
 import React, { useState } from 'react';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+
 
 
 function App() {
@@ -40,19 +42,33 @@ function App() {
     }, 3000);
   }
 
+  //const  router = createBrowserRouter([
+    //{path:"/",
+    //element: (
+    
+    //)
+  //},
+    //{path:'/about',
+    //element: (
+    //  <>
+    //<Navbar title="Feroz's" first ="Home" showAlert={showAlert}
+    //second="About" mode={mode} changemode={changemode}/>
+    //<Alert alert={alert}/>
+    //<About/>
+    //</>
+  //)}
+//]);
 
   return (
+    //<RouterProvider router={router} />
     <div>
     <Navbar title="Feroz's" first ="Home" showAlert={showAlert}
-     second="About" mode={mode} changemode={changemode}/>
+    second="About" mode={mode} changemode={changemode}/>
     <Alert alert={alert}/>
     <div className='container'>
-      <TextBox text="Enter your Text Below" mode={mode} showAlert={showAlert} />
-       
+      <TextBox text="" mode={mode} showAlert={showAlert} />
     </div>
-  
     </div>
   );
 }
-
 export default App;
